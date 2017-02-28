@@ -22,7 +22,7 @@ my $daily=1;          # Create daily log files (date in file name)
 my $perfacility=1;    # Each facility gets its own log file
 mkdir("log");         # Create log directory if it does not exist yet
 
-# Start Listening on UDP port 31400
+# Start Listening on UDP port 31400, the standard one is taken by root. 
 $sock = IO::Socket::INET->new(LocalPort => '31400', Proto => 'udp')||die("Socket: $@");
 
 my $rin = '';
