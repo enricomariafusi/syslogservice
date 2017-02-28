@@ -17,7 +17,7 @@ my $MAXLEN = 1524;
 my ($lsec,$lmin,$lhour,$lmday,$lmon,$lyear,$lwday,$lyday,$lisdst)=localtime(time); $lyear+=1900; $lmon+=1;
 @fact=("kernel","user","mail","system","security","internal","printer","news","uucp","clock","security2",
 "FTP","NTP","audit","alert","clock2","local0","local1","local2","local3","local4","local5","local6","local7");
-my $perhost=0;        # Each source gets its own log file
+my $perhost=1;        # Each source gets its own log file
 my $daily=1;          # Create daily log files (date in file name)
 my $perfacility=1;    # Each facility gets its own log file
 mkdir("log");         # Create log directory if it does not exist yet
